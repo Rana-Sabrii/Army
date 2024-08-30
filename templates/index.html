@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)file:///C:/Users/Fawzy/Downloads/Compressed/animated-login-form-main/animated-login-form-main/index.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="./index_files/remixicon.css" rel="stylesheet" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/index_files/styles.css') }}"/>
+
+    <title>مركز القيادة والسيطرة</title>
+  </head>
+  <body>
+    <div class="login">
+      <img
+        src= "{{ url_for('static', filename='index_files/egy (3).jpg') }}"
+        alt="login image"
+        class="login__img"
+      />
+
+      <form action="{{ url_for('login') }}" method="POST" class="login__form"> 
+        <center>
+          <img
+            style="width: 100px; height: 100px"
+            src="{{ url_for('static', filename='index_files/logo.png') }}"
+          />
+        </center>
+    
+        <h1 class="login__title">
+          مراكز القيادة والسيطرة 
+           
+        </h1>
+        <h1 class ="login__title">
+          الفرقة السادسة المدرعة
+        </h1>
+    
+        <div class="login__content">
+          <div class="login__box">
+            <div class="login__box-input"> 
+              <input
+                type="text"
+                required=""
+                class="login__input"
+                id="login-email"
+                name="login-email" 
+                placeholder=" "
+              />
+              <label for="login-email" class="login__label">اسم المستخدم</label>
+            </div> 
+          </div>
+        
+          <div class="login__box">
+            <div class="login__box-input"> 
+              <input
+                type="password"
+                required=""
+                class="login__input"
+                id="login-pass"
+                name="login-pass"
+                placeholder=" "
+              />
+              <label for="login-pass" class="login__label">كلمة المرور</label>
+            </div>
+          </div>
+        </div>
+    
+            <button type="submit" class="login__button">تسجيل الدخول</button>
+    
+            <p class="login__register">
+              تصميم وتنفيذ فرع عمليات الفرقة السادسة المدرعة ©
+            </p>
+          </form>
+    </div>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{{ url_for('static', filename='index_files/main.js') }}"></script>
+  </body>
+</html>

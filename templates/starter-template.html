@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)file:///C:/Users/Fawzy/Downloads/Compressed/kaiadmin-lite-1.2.0/main/starter-template.html -->
+<html
+  lang="en"
+  class="wf-fontawesome5solid-n4-active wf-simplelineicons-n4-active wf-publicsans-n3-active wf-publicsans-n4-active wf-publicsans-n5-active wf-publicsans-n6-active wf-publicsans-n7-active wf-fontawesome5regular-n4-active wf-fontawesome5brands-n4-active wf-active sidebar-color"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+    <title>مركز القيادة والسيطرة</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"    
+      
+      href="{{ url_for('static', filename='img/kaiadmin/favicon.ico') }}"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts and icons -->
+    <script src="{{ url_for('static', filename='starter-template_files/webfont.min.js') }}"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["{{ url_for('static', filename='css/fonts.min.css') }}" ],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/plugins.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/kaiadmin.min.css') }}" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/demo.css') }}" />
+  </head>
+  <body>
+    <div class="">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+            <a
+              href="file:///C:/Users/Fawzy/Downloads/Compressed/kaiadmin-lite-1.2.0/kaiadmin-lite-1.2.0/index.html"
+              class="logo"
+              style="
+                border-right-width: 20px;
+                margin-right: 20px;
+                border-left-width: 20;
+                margin-left: 20px;
+              "
+            >
+              <img
+                src="{{ url_for('static', filename='starter-template_files/logo.png') }}"
+                alt="navbar brand"
+                class="navbar-brand"
+                height="20"
+              />
+              <a href="{{ url_for('admin_dashboard') }}" style="text-decoration: none;">
+                <p style="padding-top: 15px; padding-left: 20px; color: white">
+                    مركز القيادة والسيطرة
+                </p>
+            </a>
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <div
+          class="scroll-wrapper sidebar-wrapper scrollbar scrollbar-inner"
+          style="position: relative"
+        >
+          <div
+            class="scroll-wrapper sidebar-wrapper scrollbar scrollbar-inner scroll-content scroll-scrolly_visible"
+            style="position: relative"
+          >
+            <div
+              class="sidebar-wrapper scrollbar scrollbar-inner scroll-content scroll-scrolly_visible"
+              style="
+                height: auto;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                max-height: 98.6px;
+              "
+            >
+              <div class="sidebar-content">
+                <ul class="nav nav-secondary">
+                  <li class="nav-item active submenu">
+                    <a
+                      data-bs-toggle="collapse"
+                      href="file:///C:/Users/Fawzy/Downloads/Compressed/kaiadmin-lite-1.2.0/kaiadmin-lite-1.2.0/starter-template.html#dashboard"
+                      class=""
+                      aria-expanded="true"
+                    >
+                      <i class="fas fa-home"></i>
+                      <p>سجلات مراكز القيادة</p>
+                      
+                    </a>
+                    <div class="collapse show" id="dashboard">
+                      <!-- List of Records -->
+                      <ul class="nav nav-collapse">
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1cifXZENjPc08swetEbAB0bsQGCwL9o7F/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                            <span class="sub-item">كود الوظائف</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1E8-gP841iKA6qN46nwyypODYpfidEAYt/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                            <span class="sub-item">إشارات الإنذار والتعاون والسيطرة</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1hd2UAWBf44ywwDMmHWjZ_eeI63qIkV3N/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                            <span class="sub-item">الأوامر المستديمة لمراكز القيادة و السيطرة</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1uenOSSyDLI48VjMrEG_Mqt7_Ny_XNBaT/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">البلاغات الدورية</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1MKhfio2F1X-T2NoGOyZTawvkLzs3SD_i/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">أوامر القتال - صادر</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1zxFvp5IzYBWYC9Iv40CSeeXPTo0QZ8Y6/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">أوامر القتال -وارد</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/14cpjjYs9-tC7FlNs78pZiEu28s8284o_/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">بلاغات القتال صادر </span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1JYHPWD5Q2jUPuKM2OkFq7drjJFtAzQMt/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">بلاغات القتال وارد</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1QC6yNzSBsujt_5v5El0QF9lpO3oMT1d3/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات إبتدائية</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1TOWFnm5XjnlY19sj-Vl40_mBm5Onvli5/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">تعليمات التعاون</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1TuVtuztrSKO9yS2r7LJKE-ukrlKhbDPL/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">تعليمات التعزيز</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1TPYC8Cb6ExOjsjWijfXjGab7-Ag-w1iv/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">تعليمات الغيار - إعادة التجميع</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1q9I7k_buZd0goxVLj0Ww4mOD3UUYpXV2/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات القتال صادر</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1wOLAj_dWiP5_ut6ll5N-f5hoVa54EHJG/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات القتال وارد</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1qbQL43FtFJDdxZdJC7ZNjBr2vFBM-bVy/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات الكود والرمز</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1HMg64hHtbe21Kvb_gBxyeWSXJ8ZZ7Ufi/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات المطاردة</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1_-iBSnSvR-liWBqaZwh9pewhckFjEYfN/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات تامين القتال</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1QAY2ydYzDPLCFmm6aLCIRqKjTKMTdm5R/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">تعليمات تحرك</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/14pdBIcyDd8Zm29_VsAVuxsY28Z4-KsPH/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تعليمات سطع</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1Vl3huUbC_pXfIofbUasooIP848l3EndV/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تقارير نتائج أعمال قتال الوحدات الوحدات الفرعية</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1ZDZ3LoAE_l_cxITwUOBka32NQhfo31P5/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تقارير وبلاغات سطع</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1rVYiF3Gg-lJJCKLN0VTYBZgOqCFknZIp/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">تقرير ملخص أعمال القتال اليومية</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1J2uFEWhNQJtbLWjfdlxWzHNZ5aSkDojX/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">توجيهات السيد رئيس أركان حرب القوات المسلحة</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1B6LXP3K6I5S6rO4pbaKQAugtZFS96eo4/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">خبرة قتال</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1JQ1RdaJPca_oOdRSmCX7BHR376buNsgc/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">سجل إشارات الإتذار والتعاون السيطرة</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1DIA0n70f-vxqmUuWeLr_bNG3VD9IU2DR/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">سجل الإختراقات الجوية</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1BMAdnVP3IUHW1SK6iqQCfQYposUYwnu7/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">سجل الإشارات - صادر</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1_2PnvTR8GjTKyxVRSVP2L1tjblXnfOVS/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  
+                            <span class="sub-item">سجل الإشارات - وارد</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="https://docs.google.com/document/d/1jV0D6Ph9DyuLu1TiHI7WdilbS8LlAHlu/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                 
+                            <span class="sub-item">سجل الكلمات الرمزية لحالات الاستعداد القتالي</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="#">
+                            <span class="sub-item">سجل 1</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="#">
+                            <span class="sub-item">سجل  2</span>
+                          </a>
+                        </li>
+                        <!-- Record -->
+                        <li>
+                          <a href="#">
+                            <span class="sub-item">سجل  3 </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="scroll-element scroll-x scroll-scrolly_visible">
+              <div class="scroll-element_outer">
+                <div class="scroll-element_size"></div>
+                <div class="scroll-element_track"></div>
+                <div class="scroll-bar" style="width: 0px"></div>
+              </div>
+            </div>
+            <div class="scroll-element scroll-y scroll-scrolly_visible">
+              <div class="scroll-element_outer">
+                <div class="scroll-element_size"></div>
+                <div class="scroll-element_track"></div>
+                <div class="scroll-bar" style="height: 39px; top: 0px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+      <!-- Main Panel -->
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a
+                href="file:///C:/Users/Fawzy/Downloads/Compressed/kaiadmin-lite-1.2.0/kaiadmin-lite-1.2.0/index.html"
+                class="logo"
+                style="
+                  border-right-width: 20px;
+                  margin-right: 20px;
+                  border-left-width: 20;
+                  margin-left: 20px;
+                "
+              >
+                <img
+                  src="{{ url_for('static', filename='starter-template_files/logo.png') }}"
+                  alt="navbar brand"
+                  class="navbar-brand"
+                  height="20"
+                />
+                <p style="padding-top: 15px; padding-left: 20px; color: white">
+                 مركز القيادةو السيطرة
+                </p>
+              </a>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+            <div class="container-fluid">
+               
+
+              <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                <!-- Mobile Search Icon -->
+    <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true">
+          <i class="fa fa-search"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-search animated fadeIn">
+          <form class="navbar-left navbar-form nav-search">
+              <div class="input-group">
+                  <input type="text" placeholder="Search ..." class="form-control">
+              </div>
+          </form>
+      </ul>
+  </li>
+                  <li class="nav-item topbar-user dropdown hidden-caret submenu">
+                      <a class="dropdown-toggle profile-pic show" data-bs-toggle="dropdown" href="#" aria-expanded="true">
+                          <div class="avatar-sm">
+                              <img src="{{ url_for('static', filename='starter-template_files/logo.png') }}" alt="..." class="avatar-img rounded-circle">
+                          </div>
+                          <span class="profile-username">
+                              <span class="op-7">مركز القيادة المتقدم - الفرقة السادسة المدرعة </span>
+                          </span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-user animated fadeIn show" data-bs-popper="static">
+                        <div class="scroll-wrapper dropdown-user-scroll scrollbar-outer">
+                            <div class="dropdown-user-scroll scrollbar-outer">
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg">
+                                            <img src="{{ url_for('static', filename='starter-template_files/logo.png') }}" alt="image profile" class="avatar-img rounded">
+                                        </div>
+                                        <div class="u-text" style="padding-top: 15px;">
+                                            <h4>مركز القيادة المتقدم</h4>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ url_for('logout') }}">تسجيل خروج</a>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- End Navbar -->
+        </div>
+
+        <!-- Main Content -->
+        <div class="container">
+          <div class="page-inner" style="min-height: 80vh">
+            <div
+              class="page-header"
+              style="
+                padding-right: 10px;
+                border-right-width: 10px;
+                margin-right: 10px;
+              "
+            >
+            <ul class="breadcrumbs">
+              <li class="nav-home">
+                  <a href="{{ url_for('admin_dashboard') }}">
+                      <i class="icon-home"></i>
+                  </a>
+              </li>
+          </ul>
+          
+            </div>
+            <h3 class="fw-bold mb-3">
+              سجلات مراكز القيادة
+            </h3>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1cifXZENjPc08swetEbAB0bsQGCwL9o7F/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">كود الوظائف</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record29'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1E8-gP841iKA6qN46nwyypODYpfidEAYt/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category " style="font-weight: bold; color: black;">إشارات الإنذار والتعاون والسيطرة</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['recordone'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1hd2UAWBf44ywwDMmHWjZ_eeI63qIkV3N/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">الأوامر المستديمة لمراكز القيادة و السيطرة</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['recordtwo'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1uenOSSyDLI48VjMrEG_Mqt7_Ny_XNBaT/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">البلاغات الدورية</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record3'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1MKhfio2F1X-T2NoGOyZTawvkLzs3SD_i/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">أوامر القتال - صادر</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record4'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1zxFvp5IzYBWYC9Iv40CSeeXPTo0QZ8Y6/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">أوامر القتال -وارد</p>
+                             <!-- <h4 class="card-title">{{ folder_counts['record5'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/14cpjjYs9-tC7FlNs78pZiEu28s8284o_/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">بلاغات القتال صادر</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record6'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1JYHPWD5Q2jUPuKM2OkFq7drjJFtAzQMt/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">بلاغات القتال وارد</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record7'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1QC6yNzSBsujt_5v5El0QF9lpO3oMT1d3/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات إبتدائية</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record8'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1TOWFnm5XjnlY19sj-Vl40_mBm5Onvli5/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات التعاون</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record9'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1TuVtuztrSKO9yS2r7LJKE-ukrlKhbDPL/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات التعزيز</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record10'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1TPYC8Cb6ExOjsjWijfXjGab7-Ag-w1iv/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات الغيار - إعادة التجميع</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record11'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1q9I7k_buZd0goxVLj0Ww4mOD3UUYpXV2/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات القتال صادر</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record12'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1wOLAj_dWiP5_ut6ll5N-f5hoVa54EHJG/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات القتال وارد</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record13'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1qbQL43FtFJDdxZdJC7ZNjBr2vFBM-bVy/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات الكود والرمز</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record14'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1HMg64hHtbe21Kvb_gBxyeWSXJ8ZZ7Ufi/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات المطاردة</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record15'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1_-iBSnSvR-liWBqaZwh9pewhckFjEYfN/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات تامين القتال</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record16'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1QAY2ydYzDPLCFmm6aLCIRqKjTKMTdm5R/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات تحرك</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record17'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/14pdBIcyDd8Zm29_VsAVuxsY28Z4-KsPH/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تعليمات سطع</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record18'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1Vl3huUbC_pXfIofbUasooIP848l3EndV/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تقارير نتائج أعمال قتال الوحدات الوحدات الفرعية</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record19'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1ZDZ3LoAE_l_cxITwUOBka32NQhfo31P5/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تقارير وبلاغات سطع</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record20'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1rVYiF3Gg-lJJCKLN0VTYBZgOqCFknZIp/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">تقرير ملخص أعمال القتال اليومية</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record21'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1J2uFEWhNQJtbLWjfdlxWzHNZ5aSkDojX/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">توجيهات السيد رئيس أركان حرب القوات المسلحة</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record22'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1B6LXP3K6I5S6rO4pbaKQAugtZFS96eo4/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">خبرة قتال</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record23'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1JQ1RdaJPca_oOdRSmCX7BHR376buNsgc/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل إشارات الإنذار والتعـاون والسيطرة</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record24'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1DIA0n70f-vxqmUuWeLr_bNG3VD9IU2DR/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل الإختراقات الجوية</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record25'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1BMAdnVP3IUHW1SK6iqQCfQYposUYwnu7/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل الإشارات - صادر</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record26'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1_2PnvTR8GjTKyxVRSVP2L1tjblXnfOVS/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل الإشارات - وارد</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record27'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <a href="https://docs.google.com/document/d/1jV0D6Ph9DyuLu1TiHI7WdilbS8LlAHlu/edit?usp=sharing&ouid=114296574052161674900&rtpof=true&sd=true" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل الكلمات الرمزية لحالات الاستعداد القتالي</p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record28'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href=" " target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل 1 </p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record29'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="#" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل 2  </p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record31'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <a href="#" target ="_blank">
+                  <div class="card card-stats card-round">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-5">
+                          <div class="icon-big text-center">
+                            <i class="icon-folder text-warning"></i> 
+                          </div>
+                        </div>
+                        <div class="col-7 col-stats">
+                          <div class="numbers">
+                            <p class="card-category" style="font-weight: bold; color: black;">سجل 3  </p>
+                            <!-- <h4 class="card-title">{{ folder_counts['record32'] }}</h4> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+
+         <footer class="footer" style="margin-top: auto;">
+          <div class="container-fluid d-flex justify-content-center">
+            <nav class="pull-left">
+              <ul class="nav">
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+              </ul>
+            </nav>
+            <div class="copyright">
+              <p style="text-align: center">
+                
+                تصميم وتنفيذ فرع عمليات الفرقة السادسة المدرعة
+                ©
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!--   Core JS Files   -->
+    <script src= "{{ url_for('static', filename='starter-template_files/jquery-3.7.1.min.js') }}" ></script>
+    <script src="{{ url_for('static', filename='starter-template_files/popper.min.js') }}"></script> 
+    <script src="{{ url_for('static', filename='starter-template_files/bootstrap.min.js') }}"></script>
+    
+    <!-- jQuery Scrollbar -->
+    <script src= "{{ url_for('static', filename='starter-template_files/jquery.scrollbar.min.js') }}"></script>
+    
+    <!-- Kaiadmin JS -->
+    <script src="{{ url_for('static', filename='starter-template_files/kaiadmin.min.js') }}"></script>
+  </body>
+</html>

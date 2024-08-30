@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>مركز القيادة والسيطرة</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/kaiadmin/favicon.ico') }}" type="image/x-icon" />
+    <script src="{{ url_for('static', filename='starter-template_files/webfont.min.js') }}"></script>
+    <script>
+        WebFont.load({
+            google: { families: ["Public Sans:300,400,500,600,700"] },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["{{ url_for('static', filename='css/fonts.min.css') }}"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/plugins.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/kaiadmin.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='starter-template_files/demo.css') }}" />
+    <style>
+        .drop_box {
+            border: 3px dashed #41a5ed;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .upload-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="">
+    <!-- Sidebar -->
+    <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+            <div class="logo-header" data-background-color="dark">
+                <a href="#" class="logo">
+                    <img src="{{ url_for('static', filename='starter-template_files/logo.png') }}" alt="navbar brand" class="navbar-brand" height="20" />
+                    <a href="{{ url_for('admin_dashboard') }}" style="text-decoration: none;">
+                      <p style="padding-top: 15px; padding-left: 20px; color: white">
+                          مركز القيادة والسيطرة
+                      </p>
+                </a>
+                <div class="nav-toggle">
+                    <button class="btn btn-toggle toggle-sidebar">
+                        <i class="gg-menu-right"></i>
+                    </button>
+                    <button class="btn btn-toggle sidenav-toggler">
+                        <i class="gg-menu-left"></i>
+                    </button>
+                </div>
+                <button class="topbar-toggler more">
+                    <i class="gg-more-vertical-alt"></i>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-wrapper sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item active submenu">
+                            <a data-bs-toggle="collapse" href="#dashboard" class="" aria-expanded="true">
+                                <i class="fas fa-home"></i>
+                                <p>سجلات مراكز القيادة</p>
+                                
+                              </a>
+                              <div class="collapse show" id="dashboard">
+                                <!-- List of Records -->
+                                <ul class="nav nav-collapse">
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record30">
+                                      <span class="sub-item"> سجل المحادثات التلفونية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/recordone">
+                                      <span class="sub-item">إشارات الإنذار والتعاون والسيطرة</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/recordtwo">
+                                      <span class="sub-item">الأوامر المستديمة لمراكز القيادة و السيطرة</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record3">
+                                      <span class="sub-item">البلاغات الدورية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record4">
+                                      <span class="sub-item">أوامر القتال - صادر</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record5">
+                                      <span class="sub-item">أوامر القتال -وارد</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record6">
+                                      <span class="sub-item">بلاغات القتال صادر </span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record7">
+                                      <span class="sub-item">بلاغات القتال وارد</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record8">
+                                      <span class="sub-item">تعليمات إبتدائية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record9">
+                                      <span class="sub-item">تعليمات التعاون</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record10">
+                                      <span class="sub-item">تعليمات التعزيز</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record11">
+                                      <span class="sub-item">تعليمات الغيار - إعادة التجميع</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record12">
+                                      <span class="sub-item">تعليمات القتال صادر</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record13">
+                                      <span class="sub-item">تعليمات القتال وارد</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record14">
+                                      <span class="sub-item">تعليمات الكود والرمز</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record15">
+                                      <span class="sub-item">تعليمات المطاردة</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record16">
+                                      <span class="sub-item">تعليمات تامين القتال</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record17">
+                                      <span class="sub-item">تعليمات تحرك</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record18">
+                                      <span class="sub-item">تعليمات سطع</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record19">
+                                      <span class="sub-item">تقارير نتائج أعمال قتال الوحدات الوحدات الفرعية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record20">
+                                      <span class="sub-item">تقارير وبلاغات سطع</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record21">
+                                      <span class="sub-item">تقرير ملخص أعمال القتال اليومية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record22">
+                                      <span class="sub-item">توجيهات السيد رئيس أركان حرب القوات المسلحة</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record23">
+                                      <span class="sub-item">خبرة قتال</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record24">
+                                      <span class="sub-item">سجل إشارات الإتذار والتعاون السيطرة</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record25">
+                                      <span class="sub-item">سجل الإختراقات الجوية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record26">
+                                      <span class="sub-item">سجل الإشارات - صادر</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record27">
+                                      <span class="sub-item">سجل الإشارات - وارد</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record28">
+                                      <span class="sub-item">سجل الكلمات الرمزية لحالات الاستعداد القتالي</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record29">
+                                      <span class="sub-item">كود الوظائف</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record31">
+                                      <span class="sub-item">تقرير الغارة الجوية</span>
+                                    </a>
+                                  </li>
+                                  <!-- Record -->
+                                  <li>
+                                    <a href="/record/record32">
+                                      <span class="sub-item">سجل نتائج ضرب المدفعية</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+            <div class="scroll-element scroll-x scroll-scrolly_visible">
+              <div class="scroll-element_outer">
+                <div class="scroll-element_size"></div>
+                <div class="scroll-element_track"></div>
+                <div class="scroll-bar" style="width: 0px"></div>
+              </div>
+            </div>
+            <div class="scroll-element scroll-y scroll-scrolly_visible">
+              <div class="scroll-element_outer">
+                <div class="scroll-element_size"></div>
+                <div class="scroll-element_track"></div>
+                <div class="scroll-bar" style="height: 39px; top: 0px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End Sidebar -->
+
+    <!-- Main Panel -->
+    <div class="main-panel">
+        <div class="main-header">
+            <div class="main-header-logo">
+                <div class="logo-header" data-background-color="dark">
+                    <a href="#" class="logo">
+                        <img src="{{ url_for('static', filename='starter-template_files/logo.png') }}" alt="navbar brand" class="navbar-brand" height="20" />
+                        <p style="padding-top: 15px; padding-left: 20px; color: white">مركز القيادةو السيطرة</p>
+                    </a>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+                <div class="container-fluid">
+
+                    <!-- Search Bar -->
+      <nav class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+        <form class="navbar-left navbar-form nav-search" action="{{ url_for('search') }}" method="GET">
+            <div class="input-group">
+                <input type="text" name="query" placeholder="Search ..." class="form-control">
+                <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-search pe-1">
+                        <i class="fa fa-search search-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </nav>
+
+                    <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                      <!-- Mobile Search Icon -->
+          <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true">
+                <i class="fa fa-search"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-search animated fadeIn">
+                <form class="navbar-left navbar-form nav-search">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search ..." class="form-control">
+                    </div>
+                </form>
+            </ul>
+        </li>
+                        <li class="nav-item topbar-user dropdown hidden-caret submenu">
+                            <a class="dropdown-toggle profile-pic show" data-bs-toggle="dropdown" href="#" aria-expanded="true">
+                                <div class="avatar-sm">
+                                    <img src="{{ url_for('static', filename='starter-template_files/logo.png') }}" alt="..." class="avatar-img rounded-circle">
+                                </div>
+                                <span class="profile-username">
+                                    <span class="op-7">مركز القيادة المتقدم - الفرقة السادسة المدرعة </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user animated fadeIn show" data-bs-popper="static">
+                              <div class="scroll-wrapper dropdown-user-scroll scrollbar-outer">
+                                  <div class="dropdown-user-scroll scrollbar-outer">
+                                      <li>
+                                          <div class="user-box">
+                                              <div class="avatar-lg">
+                                                  <img src="{{ url_for('static', filename='starter-template_files/logo.png') }}" alt="image profile" class="avatar-img rounded">
+                                              </div>
+                                              <div class="u-text" style="padding-top: 15px;">
+                                                  <h4>مركز القيادة المتقدم</h4>
+                                              </div>
+                                          </div>
+                                      </li>
+                                      <li>
+                                          <div class="dropdown-divider"></div>
+                                          <a class="dropdown-item" href="{{ url_for('logout') }}">تسجيل خروج</a>
+                                      </li>
+                                  </div>
+                              </div>
+                          </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="page-inner">
+                <div class="page-header" style="padding-right: 10px; border-right-width: 10px; margin-right: 10px;">
+                  <ul class="breadcrumbs">
+                    <li class="nav-home">
+                        <a href="{{ url_for('admin_dashboard') }}">
+                            <i class="icon-home"></i>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+                <h3 class="fw-bold mb-3">سجلات مراكز القيادة</h3>
+
+                <!-- Folder display and Modal -->
+                <div class="row" id="foldersRow">
+                    {% for folder in folders %}
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-stats card-round">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#folderContentModal" data-folder="{{ folder }}">
+                                                <div class="icon-big text-center">
+                                                    <i class="icon-folder-alt text-warning"></i>
+                                                </div>
+                                                <div class="numbers">
+                                                    <p class="card-category">مجلد</p>
+                                                    <h4 class="card-title">{{ folder }}</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Upload Form (Outside the folders loop) -->
+                <h3>سجل تعليمات الكود والرمز </h3>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <div class="upload-card card-stats card-round">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="drop_box">
+                                        <header>
+                                                                                        <h4>
+                                              <span style="margin: 8px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="134" height="134" viewBox="0 0 134 134" fill="none">
+<g clip-path="url(#clip0_369_458)">
+<path d="M77.1169 3.406C76.4545 2.8679 75.5824 2.66219 74.7496 2.84775L2.16639 19.5978C0.888939 19.8914 -0.0124206 21.0341 -0.00011977 22.3448V117.262C0.000403667 118.639 1.00567 119.81 2.36713 120.02L74.9504 131.187C76.4744 131.421 77.8997 130.375 78.1339 128.852C78.1554 128.712 78.1664 128.57 78.1664 128.429V5.59475C78.169 4.74338 77.7824 3.93755 77.1169 3.406Z" fill="#1565C0"/>
+<path d="M131.208 120.053H75.3748C73.833 120.053 72.583 118.803 72.583 117.261C72.583 115.719 73.833 114.47 75.3748 114.47H128.417V19.553H75.3748C73.833 19.553 72.583 18.303 72.583 16.7612C72.583 15.2195 73.833 13.9698 75.3748 13.9698H131.208C132.75 13.9698 134 15.2197 134 16.7615V117.262C134 118.803 132.75 120.053 131.208 120.053Z" fill="#1565C0"/>
+<path d="M47.4585 92.1365C46.2145 92.1352 45.1219 91.3108 44.7785 90.1153L36.2917 60.423L27.805 90.1153C27.192 91.5969 25.494 92.3011 24.0122 91.6882C23.2998 91.3935 22.7339 90.8277 22.4392 90.1153L11.2727 51.032C10.8053 49.5627 11.6177 47.9929 13.087 47.5255C14.5563 47.0581 16.1261 47.8705 16.5935 49.3398C16.61 49.3916 16.6249 49.4439 16.6385 49.4965L25.125 79.183L33.6117 49.491C34.2247 48.0094 35.9227 47.3051 37.4046 47.9181C38.117 48.2128 38.6828 48.7786 38.9775 49.491L47.4585 79.1833L55.9452 49.4968C56.347 48.0275 57.8639 47.162 59.3332 47.5637C59.3541 47.5695 59.3748 47.5755 59.3958 47.5815C60.8771 48.006 61.7342 49.5504 61.3107 51.032L50.144 90.1153C49.8001 91.3129 48.7043 92.1376 47.4585 92.1365Z" fill="#FAFAFA"/>
+<path d="M120.042 36.303H75.375C73.8332 36.303 72.5833 35.0531 72.5833 33.5113C72.5833 31.9695 73.8332 30.7195 75.375 30.7195H120.042C121.584 30.7195 122.834 31.9695 122.834 33.5113C122.834 35.0533 121.584 36.303 120.042 36.303Z" fill="#1565C0"/>
+<path d="M120.042 53.053H75.375C73.8332 53.053 72.5833 51.803 72.5833 50.2613C72.5833 48.7195 73.8332 47.4695 75.375 47.4695H120.042C121.584 47.4695 122.834 48.7195 122.834 50.2613C122.834 51.803 121.584 53.053 120.042 53.053Z" fill="#1565C0"/>
+<path d="M120.042 69.803H75.375C73.8332 69.803 72.5833 68.553 72.5833 67.0113C72.5833 65.4695 73.8332 64.2195 75.375 64.2195H120.042C121.584 64.2195 122.834 65.4695 122.834 67.0113C122.834 68.5533 121.584 69.803 120.042 69.803Z" fill="#1565C0"/>
+<path d="M120.042 86.553H75.375C73.8332 86.553 72.5833 85.303 72.5833 83.7613C72.5833 82.2195 73.8332 80.9695 75.375 80.9695H120.042C121.584 80.9695 122.834 82.2195 122.834 83.7613C122.834 85.3033 121.584 86.553 120.042 86.553Z" fill="#1565C0"/>
+<path d="M120.042 103.303H75.375C73.8332 103.303 72.5833 102.053 72.5833 100.511C72.5833 98.9695 73.8332 97.7195 75.375 97.7195H120.042C121.584 97.7195 122.834 98.9695 122.834 100.511C122.834 102.053 121.584 103.303 120.042 103.303Z" fill="#1565C0"/>
+</g>
+<defs>
+<clipPath id="clip0_369_458">
+<rect width="134" height="134" fill="white"/>
+</clipPath>
+</defs>
+                                                </svg>
+                                              </span>
+رفع ملفات 
+                                            </h4>
+                                        </header>
+                                        <p>الملفات المُدعمة: DOC , DOCX</p>
+                                        <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_file_view', record_key=record_key, folder_name=folder_name) }}">
+
+                                            {{ form.csrf_token }}
+                                            
+                                            <div class="mb-3">
+                                                <label for="desiredFilename">ادخل اسم الملف المُراد حفظه به:</label>
+                                                {{ form.desired_filename(class="form-control", id="desiredFilename") }}
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="fileUpload">اختر الملف لرفعه:</label>
+                                                {{ form.file(class="form-control", id="fileUpload") }}
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                {{ form.submit(class="btn btn-primary") }}
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                      <!-- Display uploaded files with options to download or delete -->
+                      <div class="row">
+                        <div class="col-md-12">
+                            <ul>
+                                {% for file in files %}
+                                    {% if file != '.gitkeep' %}
+                                        <li style="display: flex; flex-direction: row-reverse; justify-content: right; gap: 16px; max-width: 320px; align-items: center">
+                                          <a style="width: 100%;" href="{{ url_for('download_file', record_key=record_key, folder_name=folder_name, filename=file) }}">
+                                            تنزيل <span class="m-2">{{ file }}</span>
+                                        </a>
+                                        
+                                            |
+                                            <a style="min-width: 72px; color: red" href="{{ url_for('delete_file', record_key=record_key, folder_name=folder_name, filename=file) }}" onclick="return confirm('هل أنتَ متأكد من حذف هذا الملف؟');">
+                                              
+حذف الملف
+                                          </a>
+                                          
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                      </div>
+
+                <!-- Folder Content Modal -->
+                <div class="modal fade" id="folderContentModal" tabindex="-1" aria-labelledby="folderContentModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="folderContentModalLabel">محتويات المجلد</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="folderContent">
+                                <!-- Folder content will be loaded here -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+         <footer class="footer" style="margin-top: auto;">
+            <div class="container-fluid d-flex justify-content-center">
+                <nav class="pull-left">
+                    <ul class="nav">
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    <p style="text-align: center">تصميم وتنفيذ فرع عمليات الفرقة السادسة المدرعة ©</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='starter-template_files/jquery-3.7.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='starter-template_files/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='starter-template_files/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='starter-template_files/jquery.scrollbar.min.js') }}"></script>
+<script src="{{ url_for('static', filename='starter-template_files/kaiadmin.min.js') }}"></script>
+
+<script>
+    // Function to load folder content into the modal
+    function loadFolderContent(folderName) {
+        $.ajax({
+            url: '/uploads/' + folderName, // Your Flask route for folder content
+            type: 'GET',
+            success: function (data) {
+                $('#folderContent').html(data);
+            },
+            error: function () {
+                $('#folderContent').html('<p>Error loading folder content.</p>');
+            },
+        });
+    }
+
+    // Event listener for folder links
+    $('#folderContentModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var folderName = button.data('folder'); // Extract folder name from button
+        var modal = $(this);
+        modal.find('.modal-title').text('Files in folder: ' + folderName);
+        loadFolderContent(folderName);
+    });
+</script>
+</body>
+</html>
